@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Josefin+Sans:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Archivo Narrow", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: #3c648e;
+}
+
+a:hover {
+  text-decoration: underline;
+  filter: brightness(150%);
+}
+
+input {
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #22314e;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+select {
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #22314e;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2em;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #22314e;
+}
+
+button:hover {
+  filter: brightness(150%);
+  cursor: pointer;
+}
+
+.c-background {
+  width: 100%;
+  height: 100vh;
+  background: rgb(34, 49, 78);
+  background: linear-gradient(
+    55deg,
+    rgba(34, 49, 78, 1) 0%,
+    rgba(60, 100, 142, 1) 27%,
+    rgba(175, 197, 196, 1) 76%
+  );
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.c-form-login {
+  width: 20%;
+  height: 400px;
+  background-color: #f5f3e7;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+  border-radius: 15px;
+}
+
+.c-form-login .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.c-form-login input {
+  width: 80%;
+  height: 25px;
+}
+
+.c-form-login button {
+  width: 85%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.c-form-login p {
+  margin-top: 10px;
+}
+
+.c-task {
+  width: 50%;
+  height: auto;
+  background-color: #f5f3e7;
+  margin: 0 auto;
+  padding: 60px 60px 40px;
+  border-radius: 15px;
+}
+
+.c-task .c-task-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-task .c-task-title h1 {
+  font-size: 3em;
+}
+
+.task-button {
+  padding: 10px 20px;
+}
+
+.c-task-table {
+  max-height: 400px;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.c-task-table h2 {
+  font-size: 2em;
+}
+
+.c-items-list h4 {
+  font-family: "Archivo Narrow", sans-serif;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.t-item {
+  border: 1px solid #22314e;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 25px;
+  margin: 10px 10px 30px;
+  justify-content: space-between;
+}
+
+.t-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.t-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.t-item-title {
+  font-size: 1.2em;
+}
+
+.t-item-category {
+}
+
+.t-item-category-tag {
+  padding: 3px 10px;
+  border: 2px solid #e6e600;
+  border-radius: 20px;
+  background-color: #ffffbf;
+  color: #000000;
+  margin-left: 10px;
+}
+
+.t-item-date {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.t-item-date-tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.t-item-date-tag.today {
+  border: 1px solid #22314e;
+  background-color: #22314e;
+  color: #ffffff;
+}
+
+.t-item-date-tag.tomorrow {
+  border: 1px solid #3c648e;
+  background-color: #3c648e;
+  color: #ffffff;
+}
+
+.t-item-date-tag.next {
+  border: 1px solid #afc5c4;
+  background-color: #afc5c4;
+  color: #000000;
+}
+
+.t-item-check {
+  margin-top: 15px;
+}
+
+.t-item-check input {
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox:hover .checkbox-checkmark {
+  border: 2px solid #3c648e;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-input:focus ~ .checkbox-checkmark-box {
+  border-color: #3c648e;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark-box .checkbox-checkmark:after {
+  display: block;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark-box .checkbox-checkmark {
+  background-color: #3c648e;
+  border: 2px solid #3c648e;
+}
+
+.checkbox-input:disabled ~ .checkbox-checkmark-box .checkbox-checkmark {
+  border: 2px solid #b0b0b0;
+  cursor: not-allowed;
+}
+
+.checkbox-input:disabled:checked ~ .checkbox-checkmark-box .checkbox-checkmark {
+  background-color: #b0b0b0;
+}
+
+.checkbox-input:disabled:checked
+  ~ .checkbox-checkmark-box
+  .checkbox-checkmark:after {
+  background: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='%2374767B'/%3E%3C/svg%3E%0A")
+    no-repeat center;
+  background-size: contain;
+}
+
+.checkbox-checkmark-box {
+  min-width: 25px;
+  max-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.checkbox-checkmark {
+  min-width: 25px;
+  max-width: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #22314e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-checkmark:after {
+  content: "";
+  display: none;
+  background: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8866 9.91722L0.0873348 5.36761C0.0596566 5.34137 0.037692 5.31018 0.0227039 5.27582C0.00771585 5.24146 0 5.20461 0 5.1674C0 5.13019 0.00771585 5.09335 0.0227039 5.05899C0.037692 5.02463 0.0596566 4.99343 0.0873348 4.96719L1.29893 3.81086C1.41471 3.70049 1.60183 3.70049 1.71761 3.81086L4.87718 6.80501C4.99296 6.91538 5.18143 6.91409 5.2972 6.80372L12.2787 0.0839022C12.3945 -0.0277526 12.5829 -0.0277526 12.7001 0.0826188L13.913 1.23895C14.0288 1.34932 14.0288 1.52771 13.9143 1.63809L6.30821 8.95468L6.30956 8.95597L5.30662 9.91722C5.19085 10.0276 5.00238 10.0276 4.8866 9.91722Z' fill='white'/%3E%3C/svg%3E%0A")
+    no-repeat center;
+  width: 24px;
+  height: 20px;
+  background-size: contain;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.exit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  background-color: #ffb2b2;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 10px;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-right: 5px;
+}
+
+.close:hover,
+.close:focus {
+  color: #3c648e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 20px;
+  background-color: #22314e;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f5f3e7;
+}
+
+.modal-body input {
+  width: 80%;
+}
+
+.modal-body select {
+  width: 85%;
+}
+
+.modal-body button {
+  width: 84%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.dialog-actions {
+  width: 80%;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#btnEditTask {
+  width: 45%;
+  border: 2px solid #3c648e;
+  color: #3c648e;
+  background-color: #afc5c4;
+}
+
+#btnDeleteTask {
+  width: 45%;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  background-color: #ffb2b2;
+}
+
+.c-subtask {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.s-item-creator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.s-item-creator input {
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.s-item-creator button {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.s-items {
+  width: 90%;
+}
+
+.s-item {
+  border-top: 1px solid #b0b0b0;
+  padding: 5px 10px;
+}
+
+.s-item p {
+  font-size: 1.1em;
+}

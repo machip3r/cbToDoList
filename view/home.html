@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>To Do List | MacHip3r</title>
+  </head>
+  <body>
+    <div class="c-background">
+      <div class="c-task">
+        <div class="c-task-title">
+          <h1 id="titleHome">Hola,</h1>
+          <button class="task-button" id="btnAddTask" type="button">
+            Agregar tarea
+          </button>
+        </div>
+        <div class="c-task-table">
+          <h2>Hoy</h2>
+          <div class="c-items-list" id="todayList">
+            <h4>No hay tareas para mostrar</h4>
+          </div>
+          <h2>Mañana</h2>
+          <div class="c-items-list" id="tomorrowList">
+            <h4>No hay tareas para mostrar</h4>
+          </div>
+          <h2>Próximas tareas</h2>
+          <div class="c-items-list" id="nextList">
+            <h4>No hay tareas para mostrar</h4>
+          </div>
+        </div>
+        <div class="footer">
+          <button class="exit-button" id="btnCloseSession" type="button">
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="modalNewTask" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="closeNewTask">&times;</span>
+          <h2>Nueva Tarea</h2>
+        </div>
+        <div class="modal-body">
+          <input
+            type="text"
+            name="task"
+            id="inputTask"
+            placeholder="Tarea"
+            required
+            autocomplete="off"
+            autofocus
+          />
+          <select name="category" id="selectCategory" required></select>
+          <input type="date" name="date" id="inputDate" required />
+          <button type="button" id="btnCreateTask">Crear</button>
+        </div>
+      </div>
+    </div>
+    <div id="modalTask" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="closeTask">&times;</span>
+          <h2>Tarea</h2>
+        </div>
+        <div class="modal-body" id="modalTaskBody"></div>
+      </div>
+    </div>
+    <div id="modalEditTask" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="closeEditTask">&times;</span>
+          <h2>Editar Tarea</h2>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="editIDTask" />
+          <input
+            type="text"
+            name="task"
+            id="editTask"
+            placeholder="Tarea"
+            required
+            autocomplete="off"
+            autofocus
+          />
+          <select name="category" id="editSelectCategory" required></select>
+          <input type="date" name="date" id="editDate" required />
+          <button type="button" id="btnUpdateTask">Editar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/taskFunctions.js"></script>
+  <script src="js/task.js"></script>
+</html>

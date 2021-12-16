@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>To Do List | MacHip3r</title>
+  </head>
+  <body>
+    <div class="c-background">
+      <div class="c-form-login home">
+        <h1>ToDoList</h1>
+        <p>Entra para ver tus tareas de hoy</p>
+        <div class="form">
+          <input
+            type="text"
+            name="user"
+            id="inputUser"
+            placeholder="Usuario"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            name="password"
+            id="inputPassword"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="button" id="btnLogin">Entrar</button>
+          <p>¿No tienes cuenta? <a href="/register">Registrate aquí</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/loginFunctions.js"></script>
+  <script src="js/login.js"></script>
+</html>
